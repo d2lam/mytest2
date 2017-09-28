@@ -5,6 +5,7 @@ jobs:
         # template: tifftemplate2@1.3.1
         steps:
             - stuff: echo $SD_TOKEN
+            - eventid: echo $SD_EVENT_ID
             - evn: printenv
             - preecho: echo 'I am adding this'
             - echo: echo 'replacing this step'
