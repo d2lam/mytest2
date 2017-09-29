@@ -10,3 +10,6 @@ jobs:
             - preecho: echo 'I am adding this'
             - echo: echo 'replacing this step'
             - postecho: echo 'bye bye' > /tmp/config
+    sd-setup-scm:
+        steps:
+            - echostuff: echo bye
