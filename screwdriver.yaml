@@ -10,6 +10,8 @@ jobs:
             - preecho: echo 'I am adding this'
             - echo: echo 'replacing this step'
             - postecho: echo 'bye bye' > /tmp/config
+        requires: ~commit
     sd-setup-scm:
+        requires: main
         steps:
             - echostuff: echo bye
