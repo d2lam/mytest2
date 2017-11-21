@@ -4,3 +4,8 @@ jobs:
   main:
     steps:
       - echo: echo bye
+    requires: [~commit]
+  pr:
+    steps:
+      - echopr: echo pr
+    requires: [~pr]
