@@ -1,3 +1,4 @@
 jobs:
   main:
-    template: foo
+    steps:
+      - echo: echo bye
