@@ -5,3 +5,6 @@ jobs:
     steps:
       - metaset: meta set foo barrrrrr
       - metaget: meta get foo
+    annotations:
+      beta.screwdriver.cd/cpu: HIGH
+      beta.screwdriver.cd/ram: LOW
