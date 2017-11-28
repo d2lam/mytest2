@@ -3,6 +3,7 @@ shared:
 jobs:
   main:
     steps:
+      - sleep: sleep 2000
       - metaset: meta set foo barrrrrr
       - metaget: meta get foo
     annotations:
