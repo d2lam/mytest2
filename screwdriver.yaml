@@ -3,9 +3,10 @@ shared:
 jobs:
   main:
     steps:
-      - sleep: sleep 2000
+      - metaget3: meta get nonexist
       - metaset: meta set foo barrrrrr
       - metaget: meta get foo
+      - metaget2: meta get stuff
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
