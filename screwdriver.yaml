@@ -12,6 +12,6 @@ jobs:
       - ~pr
   main2:
     steps:
-      - echo: bye
+      - echo: echo bye
     requires:
       - main
