@@ -3,9 +3,8 @@ shared:
 jobs:
   main:
     steps:
-      - metaset: meta set foo barrrrrr
-      - metaget: meta get foo
-      - metaget2: meta get stuff
+      - metaset: meta set hello bye
+      - metaget2: meta get doesnotexist
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
