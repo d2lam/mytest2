@@ -3,7 +3,6 @@ shared:
 jobs:
   main:
     steps:
-      - metaget3: meta get nonexist
       - metaset: meta set foo barrrrrr
       - metaget: meta get foo
       - metaget2: meta get stuff
