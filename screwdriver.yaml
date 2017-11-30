@@ -4,6 +4,7 @@ jobs:
   main:
     steps:
       - metaset: meta set hello bye
+      - sleep: sleep 1000
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
