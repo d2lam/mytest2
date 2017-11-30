@@ -3,10 +3,15 @@ shared:
 jobs:
   main:
     steps:
-      - metaget2: meta get doesnotexist
       - metaset: meta set hello bye
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
     requires:
       - ~commit
+      - ~pr
+  main2:
+    steps:
+      - echo: bye
+    requires:
+      - ~main
