@@ -8,3 +8,5 @@ jobs:
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
+    requires:
+      - ~commit
