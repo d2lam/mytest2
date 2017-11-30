@@ -14,4 +14,4 @@ jobs:
     steps:
       - echo: bye
     requires:
-      - ~main
+      - main
