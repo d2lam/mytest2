@@ -14,4 +14,4 @@ jobs:
     steps:
       - echo: echo bye
     requires:
-      - main
+      - ~pr
