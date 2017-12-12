@@ -11,5 +11,11 @@ jobs:
   prJob4444:
     steps:
       - newstep: echo bye
+      - newerstep: echo bye
+    requires:
+      - ~pr
+  prJob5555:
+    steps:
+      - echo: echo hello
     requires:
       - ~pr
