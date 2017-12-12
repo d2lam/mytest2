@@ -16,3 +16,9 @@ jobs:
       - echo: echo bye
     requires:
       - ~pr
+  newPR123:
+    steps:
+      - byebyebyebyebye: echo hello
+      - newstep: echo byeeee
+    requires:
+      - ~pr
