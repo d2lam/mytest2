@@ -19,6 +19,7 @@ jobs:
   newPR:
     steps:
       - byebyebyebyebye: echo hello
+      - newstep: echo byeeee
     requires:
       - ~pr
    evenNewerPR:
