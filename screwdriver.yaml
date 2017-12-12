@@ -21,3 +21,8 @@ jobs:
       - byebye: echo hello
     requires:
       - ~pr
+   evenNewerPR:
+    steps:
+      - hihi: echo bye
+    requires:
+      - ~pr
