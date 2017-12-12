@@ -14,5 +14,6 @@ jobs:
   main2:
     steps:
       - echo: echo bye
+      - sleep: sleep 1000
     requires:
       - ~pr
