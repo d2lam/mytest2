@@ -14,7 +14,7 @@ jobs:
       - newerstep: echo bye
     requires:
       - ~pr
-  prJob9999:
+  prJob10000:
     steps:
       - echo22: echo hello
     requires:
