@@ -5,13 +5,10 @@ jobs:
     steps:
       - metaset: meta set hello bye
       - sleep: sleep 1000
-    annotations:
-      beta.screwdriver.cd/cpu: HIGH
-      beta.screwdriver.cd/ram: LOW
     requires:
       - ~commit
       - ~pr
-  main2:
+  prJob:
     steps:
       - echo: echo bye
     requires:
