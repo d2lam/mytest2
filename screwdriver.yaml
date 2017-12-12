@@ -10,6 +10,6 @@ jobs:
       - ~pr
   prJob4444:
     steps:
-      - echo: echo bye
+      - newstep: echo bye
     requires:
       - ~pr
