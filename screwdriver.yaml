@@ -16,6 +16,6 @@ jobs:
       - ~pr
   prJob5555:
     steps:
-      - echo: echo hello
+      - echo22: echo hello
     requires:
       - ~pr
