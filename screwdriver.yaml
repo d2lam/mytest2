@@ -8,7 +8,7 @@ jobs:
     requires:
       - ~commit
       - ~pr
-  prJob123:
+  prJob3333:
     steps:
       - echo: echo bye
     requires:
