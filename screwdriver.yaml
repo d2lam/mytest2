@@ -1,13 +1,6 @@
 shared:
   image: node:6
 jobs:
-  main:
-    steps:
-      - metaset: meta set hello bye
-      - sleep: sleep 1000
-    requires:
-      - ~commit
-      - ~pr
   prJob4444:
     steps:
       - newwwwwww: echo bye
