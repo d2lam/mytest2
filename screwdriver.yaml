@@ -4,13 +4,15 @@ jobs:
   main:
     steps:
       - metaset: meta set hello bye
-      - sleep: sleep 1000
+      - runstep: APP=sdapi && eval "$STATUS"
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
     requires:
       - ~commit
       - ~pr
+    environment:
+      STATUS: echo $APP
   main2:
     steps:
       - echo: echo bye
