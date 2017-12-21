@@ -5,6 +5,7 @@ jobs:
     steps:
       - metaset: meta set hello bye
       - runstep: APP=sdapi && eval "$STATUS"
+      - echo: echo $SD_TOKEN
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
