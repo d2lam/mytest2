@@ -18,5 +18,6 @@ jobs:
   main2:
     steps:
       - echo: echo bye
+      - docker: docker run node:6 
     requires:
       - ~pr
