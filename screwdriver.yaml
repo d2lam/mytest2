@@ -20,3 +20,4 @@ jobs:
       - docker: docker run node:6 
     requires:
       - ~pr
+      - ~commit
