@@ -9,6 +9,7 @@ jobs:
     annotations:
       beta.screwdriver.cd/cpu: HIGH
       beta.screwdriver.cd/ram: LOW
+      beta.screwdriver.cd/executor: k8s-vm
     requires:
       - ~commit
       - ~pr
