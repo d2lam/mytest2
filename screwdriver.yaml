@@ -11,10 +11,3 @@ jobs:
       - ~pr
     environment:
       STATUS: echo $APP
-  main2:
-    steps:
-      - echo: echo bye
-      - docker: docker run node:6 
-    requires:
-      - ~pr
-      - ~commit
