@@ -2,6 +2,8 @@ shared:
   image: node:6
 jobs:
   main:
+    annotations:
+      - beta.screwdriver.cd/executor: queue
     steps:
       - metaset: meta set hello bye
       - runstep: APP=sdapi && eval "$STATUS"
