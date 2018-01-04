@@ -8,6 +8,7 @@ jobs:
       - metaset: meta set hello bye
       - runstep: APP=sdapi && eval "$STATUS"
       - echo: echo $SD_TOKEN
+      - sleep: sleep 1000
     requires:
       - ~commit
       - ~pr
