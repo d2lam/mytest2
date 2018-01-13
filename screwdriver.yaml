@@ -5,10 +5,8 @@ jobs:
     annotations:
       beta.screwdriver.cd/executor: queue
     steps:
-      - metaset: meta set hello bye
-      - runstep: APP=sdapi && eval "$STATUS"
-      - echo: echo $SD_TOKEN
-      - sleep: sleep 1000
+      - metaset: meta set foo 123456789
+      - metaget: meta get foo
     requires:
       - ~commit
       - ~pr
