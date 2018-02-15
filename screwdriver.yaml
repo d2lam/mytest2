@@ -5,6 +5,7 @@ jobs:
     annotations:
       beta.screwdriver.cd/executor: queue
     steps:
+      - echo: echo $SD_TOKEN
       - metaset: meta set foo 123456789
       - metaget: meta get foo
     requires:
