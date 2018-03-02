@@ -11,8 +11,8 @@ jobs:
       - ~pr
     environment:
       STATUS: echo $APP
-  test:
+  test1234:
     steps:
-      - getstuff: meta get foo
+      - getstuff1234: meta get foo
     requires:
       - main
