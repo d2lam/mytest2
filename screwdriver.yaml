@@ -2,8 +2,6 @@ shared:
   image: node:6
 jobs:
   main:
-    annotations:
-      beta.screwdriver.cd/executor: queue
     steps:
       - echo: echo $SD_TOKEN
       - metaset: meta set foo 123456789
@@ -13,3 +11,8 @@ jobs:
       - ~pr
     environment:
       STATUS: echo $APP
+  test:
+    steps:
+      - getstuff: meta get foo
+    requires:
+      - main
