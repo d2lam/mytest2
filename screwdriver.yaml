@@ -5,8 +5,8 @@ jobs:
     steps:
       - echo: echo $SD_TOKEN
       - metaset: meta set foo 123456789
-      - metaset: meta set test 1234
-      - metaget: meta get foo
+      - metaset2: meta set test 1234
+      - sleep: sleep 10
     requires:
       - ~commit
       - ~pr
