@@ -14,5 +14,7 @@ jobs:
   test1234:
     steps:
       - getstuff1234: meta get foo
+      - metaset: meta set foo bar
+      - metaset: meta set bar baz
     requires:
       - main
