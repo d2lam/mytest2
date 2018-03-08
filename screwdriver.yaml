@@ -5,6 +5,7 @@ jobs:
     steps:
       - echo: echo $SD_TOKEN
       - metaset: meta set foo 123456789
+      - metaset: meta set test 1234
       - metaget: meta get foo
     requires:
       - ~commit
