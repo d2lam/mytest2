@@ -9,7 +9,6 @@ jobs:
       - sleep: sleep 10
     requires:
       - ~commit
-      - ~pr
     environment:
       STATUS: echo $APP
   test1234:
@@ -21,5 +20,4 @@ jobs:
   test5678:
     steps:
       - getstuff1234: meta get foo
-    requires:
-      - [~main, ~test1234]
+    requires: [main, test1234]
