@@ -16,6 +16,10 @@ jobs:
     steps:
       - getstuff1234: meta get foo
       - metaset: meta set foo bar
-      - metaset: meta set bar baz
     requires:
-      - main
+      - ~commit
+  test5678:
+    steps:
+      - getstuff1234: meta get foo
+    requires:
+      - [~main, ~test1234]
