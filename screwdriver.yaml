@@ -1,7 +1,13 @@
 shared:
   image: node:6
 jobs:
-  main:
+  prJob4444:
+    steps:
+      - newwwwwww: echo bye
+      - newerstep: echo bye
+    requires:
+      - ~pr
+  prJob10000:
     steps:
       - echo: echo $SD_TOKEN
       - metaset: meta set foo 123456789
