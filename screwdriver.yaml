@@ -3,7 +3,10 @@ shared:
 jobs:
   main:
     steps:
-      - echo: echo $SD_TOKEN
+      - echo: |
+          echo $SD_TOKEN
+          meta set test 123
+          meta get test
       - metaset: meta set foo 123456789
       - metaset2: meta set test 1234
       - sleep: sleep 10
