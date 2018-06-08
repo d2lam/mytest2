@@ -3,24 +3,6 @@ shared:
 jobs:
   main:
     steps:
-      - echo: |
-          echo $SD_TOKEN
-          meta set test 123
-          meta get test
-      - metaset: meta set foo 123456789
-      - metaset2: meta set test 1234
       - sleep: sleep 10
     requires:
       - ~commit
-    environment:
-      STATUS: echo $APP
-  test1234:
-    steps:
-      - getstuff1234: meta get foo
-      - metaset: meta set foo bar
-    requires:
-      - ~commit
-  test5678:
-    steps:
-      - getstuff1234: meta get foo
-    requires: [main, test1234]
