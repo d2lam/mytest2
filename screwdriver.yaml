@@ -3,12 +3,12 @@ shared:
 jobs:
   main:
     steps:
-      - set: export COVERAGE=90
-      - unstable: |
+      - set-unstable: |
           if [ "$COVERAGE" -lt 95 ]
             then curl -X PUT -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d '{"status": "UNSTABLE", "statusMessage": "this build is unstable"}' "${API_URL}/${SD_BUILD_ID}"
           fi
-    secrets:
-      - API_TOKEN
+    environment:
+        COVERAGE: 90
+        API_URL: https://api.screwdriver.cd/builds
     requires:
       - ~commit
