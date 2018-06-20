@@ -9,6 +9,6 @@ jobs:
           fi
     environment:
         COVERAGE: 90
-        API_URL: https://api.screwdriver.cd/builds
+        API_URL: https://api.screwdriver.cd/v4/builds
     requires:
       - ~commit
