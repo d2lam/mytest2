@@ -6,7 +6,7 @@ jobs:
       - set: export COVERAGE=90
       - unstable: >
           if [ "$COVERAGE" -lt 95 ];then curl -X PUT -H "Authorization: Bearer $API_TOKEN" -H "Content-Type: application/json" \ -d '{"status": "UNSTABLE", "statusMessage": "this build is unstable"}' $API_URL
-    environments:
+    environment:
       API_URL: https://api.screwdriver.cd/v4/builds
     secrets:
       - API_TOKEN
