@@ -5,6 +5,8 @@ jobs:
     steps:
       - fail: exit 1
       - mystep-sd-teardown-stuff: echo should not run
+    requires:
+      - ~commit
   main:
     steps:
       - set-unstable: |
@@ -16,7 +18,7 @@ jobs:
         COVERAGE: 90
         API_URL: https://api.screwdriver.cd/v4/builds
     requires:
-      - ~commit
+      - main
   publish:
     steps:
       - echo: echo "This will not be triggered"
