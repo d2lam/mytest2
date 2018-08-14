@@ -1,15 +1,18 @@
-shared:
-    image: node:6
+---
 jobs:
-    test:
-        steps:
-            - echo: echo hi
-        requires: ~commit
-    test1:
-        steps:
-            - echo: sleep 20
-    test2:
-        steps:
-            - echo: echo bye
-        requires: [~test, ~test1]
-        
+ A:
+  requires: []
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+    - logs: echo "e2e"
+ B:
+  requires: []
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+    - a: echo "a"
+ C:
+  requires: [A, B]
+  # template: ysawada/failed-template
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+  - b: echo "sample"
