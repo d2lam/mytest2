@@ -1,9 +1,9 @@
 jobs:
  A:
-  requires: []
+  requires: [~commit]
   image: node:6
   steps:
-    - logs: echo "e2e"
+    - logs: echo $SD_TOKEN
  B:
   requires: []
   image: node:6
