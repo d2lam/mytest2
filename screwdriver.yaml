@@ -1,17 +1,11 @@
+shared:
+    image: node:6
 jobs:
- A:
-  requires: [~commit]
-  image: node:6
-  steps:
-    - logs: echo $SD_TOKEN
-    - sleep: sleep 100
- B:
-  requires: []
-  image: node:6
-  steps:
-    - a: echo "a"
- C:
-  requires: [A, B]
-  image: node:6
-  steps:
-  - b: echo "sample"
+    test:
+        steps:
+            - create: echo hi > /tmp/test
+            - token: echo $SD_TOKEN
+            - file: cat /tmp/test
+            - echo: echo $STORE_URL/v1/events/$SD_EVENT_ID/mycache
+            - upload: "curl -H \"Authorization: Bearer $SD_TOKEN\" -H \"Content-Type: text/plain\" -X PUT \"https://store.screwdriver.cd/v1/events/$SD_EVENT_ID/mycache\" -T \"\/tmp\/test\""
+        requires: [~pr, ~commit]
