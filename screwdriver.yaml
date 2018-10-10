@@ -3,7 +3,7 @@ shared:
 jobs:
     test:
         steps:
-            - meta: meta set meta.a-a.b_b 1.5M
+            - meta: meta set meta.a-a.b_b 1.5M }
             - metaget: meta get meta.a-a.b_b
             - create: echo bye > /tmp/test
             - token: echo $SD_TOKEN
