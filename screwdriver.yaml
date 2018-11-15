@@ -3,6 +3,7 @@ shared:
 jobs:
     test:
         steps:
+            - env: env
             - meta: meta set meta.a-a.b_b 1.5M }
             - metaget: meta get meta.a-a.b_b
             - cat: cat /sd/meta/meta.json
