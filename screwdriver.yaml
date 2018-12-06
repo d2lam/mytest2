@@ -1,15 +1,10 @@
 shared:
     image: node:6
+cache:
+    job:
+        main: [/tmp/test]
 jobs:
-    test:
+    main:
         steps:
-            - env: env
-            - meta: meta set meta.a-a.b_b 1.5M }
-            - metaget: meta get meta.a-a.b_b
-            - cat: cat /sd/meta/meta.json
-            - create: echo bye > /tmp/test
-            - token: echo $SD_TOKEN
-            - file: cat /tmp/test
-            - echo: echo $STORE_URL/v1/events/$SD_EVENT_ID/mycache
-            - upload: "curl -H \"Authorization: Bearer $SD_TOKEN\" -H \"Content-Type: text/plain\" -X PUT \"https://store.screwdriver.cd/v1/events/54998/mycache\" -T \"\/tmp\/test\""
-        requires: [~pr, ~commit]
+            - cat: cat /tmp/test # should be empty first time
+            - write: echo hello > /tmp/test
