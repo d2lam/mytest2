@@ -8,4 +8,4 @@ jobs:
         steps:
             - cat: cat /tmp/test # should be empty first time
             - write: echo hello > /tmp/test
-    requires: [~pr, ~commit]
+        requires: [~pr, ~commit]
