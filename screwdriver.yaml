@@ -6,6 +6,6 @@ cache:
 jobs:
     main:
         steps:
-            - cat: cat /tmp/test # should be empty first time
+            - cat: cat /tmp/test || true # should be empty first time
             - write: echo hello > /tmp/test
         requires: [~pr, ~commit]
