@@ -1,12 +1,8 @@
 shared:
     image: node:6
-cache:
-    job:
-        main: [/tmp/test]
 jobs:
     main:
         steps:
-            - cat: cat /tmp/test || true # should be empty first time
             - write: echo hello > /tmp/test
-            - echo: echo $SD_TOKEN
+            - cp: cp /tmp/test $ARTIFACTS_DIR
         requires: [~pr, ~commit]
