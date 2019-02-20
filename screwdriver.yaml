@@ -3,7 +3,6 @@ shared:
 jobs:
     main:
         steps:
-            - write: echo hello > /tmp/test
-            - cp: cp /tmp/test $ARTIFACTS_DIR
+            - write: echo hello
         sourcePaths: ["screwdriver.yaml"]
         requires: [~pr, ~commit]
