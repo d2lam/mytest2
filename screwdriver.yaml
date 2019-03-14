@@ -6,3 +6,5 @@ jobs:
             - write: echo hello
         sourcePaths: ["screwdriver.yaml"]
         requires: [~pr, ~commit]
+        annotations:
+            screwdriver.cd/buildPeriodically: 'H * * * *'
