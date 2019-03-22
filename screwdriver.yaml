@@ -2,10 +2,7 @@ shared:
     image: node:6
 jobs:
     main:
+        template: template_namespace/nodejs_main@1.2.0
         steps:
-            - write: echo hello
-            - env: env
-#        sourcePaths: ["screwdriver.yaml"]
+            - tearddown-write: echo hello
         requires: [~pr, ~commit]
-        environment:
-            test: 'abc'
