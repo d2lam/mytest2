@@ -4,5 +4,5 @@ jobs:
     main:
         template: template_namespace/nodejs_main@1.2.0
         steps:
-            - tearddown-write: echo hello
+            - teardown-write: echo hello
         requires: [~pr, ~commit]
