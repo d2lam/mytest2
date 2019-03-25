@@ -2,7 +2,7 @@ shared:
     image: node:6
 jobs:
     main:
-        template: template_namespace/nodejs_main@1.2.0
         steps:
-            - teardown-write: echo hello
+            - meta-get: meta get foo
+            - meta-set: meta set foo bar
         requires: [~pr, ~commit]
