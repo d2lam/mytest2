@@ -4,6 +4,5 @@ jobs:
     main:
         steps:
             - env: env
-            - set: export SD_ARTIFACTS_DIR=/tmp
-            - get: echo $SD_ARTIFACTS_DIR
+            - pr: if [ "$SD_PULL_REQUEST" = "" ]; then echo "not pull request";  else echo "is a pull request"; fi;
         requires: [~pr, ~commit]
