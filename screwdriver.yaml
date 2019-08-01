@@ -9,6 +9,6 @@ jobs:
         requires: [~pr, ~commit]
     external:
         steps:
-            - meta: meta get foo  
+            - meta: meta get foo --external sd@726
             - env: env
         requires: [~pr, ~sd@726:test]
