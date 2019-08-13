@@ -3,7 +3,7 @@ shared:
 jobs:
     main:
         steps:
-            - pwd: pwd
+            - user-pwd: pwd
             - teardown-step: pwd
         requires: [~pr, ~commit]
     external:
