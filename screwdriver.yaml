@@ -3,9 +3,8 @@ shared:
 jobs:
     main:
         steps:
-            - meta: meta get foo
-            - env: env
-            - pr: if [ "$SD_PULL_REQUEST" = "" ]; then echo "not pull request";  else echo "is a pull request"; fi;
+            - pwd: pwd
+            - teardown-step: pwd
         requires: [~pr, ~commit]
     external:
         steps:
