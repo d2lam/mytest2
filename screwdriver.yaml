@@ -4,9 +4,9 @@ jobs:
     main:
         steps:
             - user-pwd: pwd
-#             - meta-set-1: meta set foo[2].bar[1] baz
-            - meta-set-2: meta set foo '{"bar": "baz", "buz": 123}' --json-value
-            - meta-get: meta get foo --json-value
+            - meta-set-1: meta set foo.bar baz
+            - meta-get-1: meta get foo --json-value
+#            - meta-set-2: meta set foo '{"bar": "baz", "buz": 123}' --json-value
         requires: [~pr, ~commit]
     external:
         steps:
